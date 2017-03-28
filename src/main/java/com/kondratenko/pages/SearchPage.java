@@ -5,9 +5,9 @@ package com.kondratenko.pages;
  */
 import org.openqa.selenium.WebDriver;
 
-public class GoogleSearchPage extends AbstractPage{
+public class SearchPage extends AbstractPage {
 
-    public GoogleSearchPage(WebDriver driver) {
+    public SearchPage(WebDriver driver) {
         super(driver);
     }
 

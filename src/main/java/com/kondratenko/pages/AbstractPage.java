@@ -18,11 +18,15 @@ public abstract class AbstractPage {
 
     }
 
-    public void sendSearchData(String search) {
-        WebElement searchField = driver.findElement(By.name("q"));
-        searchField.sendKeys(search);
+    public void sendSearchData(String searchFiledParameter, String textInput) {
+        WebElement searchField = driver.findElement(By.name(searchFiledParameter));
+        searchField.sendKeys(textInput);
         searchField.submit();
     }
 
+    public void findSearchButton(String searchButtonParameter){
+        WebElement searchButton = driver.findElement(By.id(searchButtonParameter));
+        searchButton.click();
+    }
 
 }

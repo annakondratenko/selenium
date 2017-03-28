@@ -1,9 +1,8 @@
 package com.kondratenko.Lesson20;
 
 import com.kondratenko.core.WebDriverTestBaseTestNG;
-import com.kondratenko.pages.AbstractPage;
-import com.kondratenko.pages.GoogleResultPage;
-import com.kondratenko.pages.GoogleSearchPage;
+import com.kondratenko.pages.ResultPage;
+import com.kondratenko.pages.SearchPage;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertEquals;
@@ -14,10 +13,10 @@ import static org.testng.AssertJUnit.assertEquals;
 public class GoogleSearchTest extends WebDriverTestBaseTestNG {
     @Test
     public void searchTest() {
-        GoogleSearchPage googleSearchPage = new GoogleSearchPage(driver);
+        SearchPage googleSearchPage = new SearchPage(driver);
         googleSearchPage.openURL("https://www.google.com");
-        googleSearchPage.sendSearchData("Selenium");
-        GoogleResultPage googleResultPage = new GoogleResultPage(driver);
-        assertEquals(googleResultPage.findLink().getText().contains("Selenium"), true);
+        googleSearchPage.sendSearchData("q","Selenium");
+        ResultPage googleResultPage = new ResultPage(driver);
+        assertEquals(googleResultPage.findLink(".//*[@id='rso']/div/div/div[2]/div/h3/a").getText().contains("Selenium"), true);
     }
 }
