@@ -10,7 +10,7 @@ import static org.testng.AssertJUnit.assertEquals;
 /**
  * Created by annak on 28.03.2017.
  */
-public class DefaultSearch_TC extends WebDriverTestBaseTestNG {
+public class DefaultSearch_C4315 extends WebDriverTestBaseTestNG {
     @Test
     public void checkSearchOnHomePage(){
         SearchPage thomasCoocSearchPage = new SearchPage(driver);

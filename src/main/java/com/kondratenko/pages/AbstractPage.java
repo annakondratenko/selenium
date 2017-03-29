@@ -29,4 +29,15 @@ public abstract class AbstractPage {
         searchButton.click();
     }
 
+    public void sendSearchParameters(String searchFiledParameter, String textInput) {
+        WebElement searchField = driver.findElement(By.id(searchFiledParameter));
+        searchField.sendKeys(textInput);
+        searchField.submit();
+    }
+
+    public void selectElementFromDropDown(String xpath) {
+        WebElement selectElement = driver.findElement(By.xpath(xpath));
+        selectElement.click();
+    }
+
 }
