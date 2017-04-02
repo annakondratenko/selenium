@@ -18,11 +18,15 @@ public class WebDriverTestBaseTestNG {
 
     public void setUp() {
         //for FF version if not esr
-        System.setProperty("webdriver.gecko.driver","D:\\QAAuto\\javacore\\maven\\selenium\\src\\test\\resources\\geckodriver.exe");
-        //initializes browser
+        System.setProperty("webdriver.gecko.driver",WebDriverTestBaseTestNG.class.getClassLoader().getResource("geckodriver.exe").getPath());
+
+
+                //initializes browser
         driver = new FirefoxDriver();
         //Maximize a window size
         driver.manage().window().maximize();
+        driver.manage().timeouts().setScriptTimeout(50,TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(60,TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
     }

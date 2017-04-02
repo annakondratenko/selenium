@@ -1,8 +1,8 @@
 package com.kondratenko.ThomasCoocUK;
 
 import com.kondratenko.core.WebDriverTestBaseTestNG;
-import com.kondratenko.pages.ResultPage;
-import com.kondratenko.pages.SearchPage;
+import com.kondratenko.pages.ThomasCoocResultPage;
+import com.kondratenko.pages.ThomasCoocSearchPage;
 import org.testng.annotations.Test;
 import static org.testng.AssertJUnit.assertEquals;
 
@@ -13,10 +13,10 @@ import static org.testng.AssertJUnit.assertEquals;
 public class DefaultSearch_C4315 extends WebDriverTestBaseTestNG {
     @Test
     public void checkSearchOnHomePage(){
-        SearchPage thomasCoocSearchPage = new SearchPage(driver);
+        ThomasCoocSearchPage thomasCoocSearchPage = new ThomasCoocSearchPage(driver);
         thomasCoocSearchPage.openURL("https://www.thomascook.com/");
         thomasCoocSearchPage.findSearchButton("SearchbarForm-submitBtn");
-        ResultPage resultPage = new ResultPage(driver);
+        ThomasCoocResultPage resultPage = new ThomasCoocResultPage(driver);
         assertEquals(resultPage.findLink(".//*[@id='paginationSearchResultsPanel']/div[2]").isDisplayed(), true);
 
     }
