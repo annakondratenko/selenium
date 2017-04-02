@@ -6,6 +6,9 @@ package com.kondratenko.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.concurrent.TimeUnit;
 
 public class ThomasCoocSearchPage extends AbstractPage {
 
@@ -18,6 +21,7 @@ public class ThomasCoocSearchPage extends AbstractPage {
     // SearchFor2Adults_C10093
     public void sendSearchParameters(String searchFiledParameter, String textInput) {
         WebElement searchField = driver.findElement(By.id(searchFiledParameter));
+        webDriverUtils.waitForExpectedCondition(ExpectedConditions.visibilityOf(searchField));
         searchField.sendKeys(textInput);
         searchField.submit();
     }
