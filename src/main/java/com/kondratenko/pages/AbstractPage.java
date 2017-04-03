@@ -17,7 +17,7 @@ public abstract class AbstractPage {
         webDriverUtils = new WebDriverUtils(this.driver);
     }
 
-    // old ThomasCoocResultPage
+    // old ThomasCookResultPage
     public void sendSearchData(String searchFiledParameter, String textInput) {
         WebElement searchField = driver.findElement(By.name(searchFiledParameter));
         searchField.sendKeys(textInput);
