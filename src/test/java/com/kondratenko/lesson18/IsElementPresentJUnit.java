@@ -1,9 +1,9 @@
-package com.kondratenko.Lesson18;
+package com.kondratenko.lesson18;
 
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
 import static org.junit.Assert.*;
-import org.openqa.selenium.*;
+import org.openqa.selenium.*; 
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 

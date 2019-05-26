@@ -1,4 +1,4 @@
-package com.kondratenko.Lesson18;
+package com.kondratenko.lesson18;
 
 import com.kondratenko.core.WebDriverTestBaseTestNG;
 import org.testng.annotations.*;

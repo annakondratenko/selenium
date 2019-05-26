@@ -1,4 +1,4 @@
-package com.kondratenko.Lesson20;
+package com.kondratenko.lesson20;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

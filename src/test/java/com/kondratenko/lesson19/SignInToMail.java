@@ -1,7 +1,6 @@
-package com.kondratenko.Lesson19;
+package com.kondratenko.lesson19;
 
 import com.kondratenko.core.WebDriverTestBaseTestNG;
-import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;

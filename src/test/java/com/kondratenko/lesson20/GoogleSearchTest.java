@@ -1,4 +1,4 @@
-package com.kondratenko.Lesson20;
+package com.kondratenko.lesson20;
 
 import com.kondratenko.core.WebDriverTestBaseTestNG;
 import com.kondratenko.pages.GoogleResultPage;

@@ -1,10 +1,16 @@
-package com.kondratenko.Lesson19;
+package com.kondratenko.lesson19;
 
 
 import com.kondratenko.core.WebDriverTestBaseTestNG;
 import org.testng.annotations.*;
 import org.openqa.selenium.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.lang.invoke.MethodHandles;
+
 public class LoginToTheGame extends WebDriverTestBaseTestNG {
+    private static final Logger LOG = LogManager.getLogger(MethodHandles.lookup().lookupClass());
 
     @Test
     public void loginToTheGame()  {
